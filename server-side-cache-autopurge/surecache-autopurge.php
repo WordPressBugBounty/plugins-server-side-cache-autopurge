@@ -5,7 +5,7 @@
  * Plugin URI: https://tickets.suresupport.com
  * Author: Suresupport
  * Author URI: https://suresupport.com
- * Version: 1.0.3
+ * Version: 1.0.4
  * Text Domain: surecache-autopurge
  * Domain Path: /languages
  */

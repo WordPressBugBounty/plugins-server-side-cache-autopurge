@@ -69,6 +69,12 @@ class SureCache_AutoPurge_PurgeQueue {
 		$URL = array_pop( $this->queue );
 		$result = $this->purge($URL, true);
 
+		if ( is_wp_error( $result ) ) {
+			error_log( sprintf( __( 'Server-Side Cache wp error. Server: %s', 'surecache-autopurge' ), esc_url( $URL ) ) );
+			$this->queue = array();
+			return false;
+		}
+
 		if ( isset( $result['response']['code'] ) and $result['response']['code'] == '404' ) {
 			// SSC is turned off from server settings
 			$this->queue = array();
