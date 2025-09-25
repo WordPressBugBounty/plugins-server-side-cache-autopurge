@@ -5,7 +5,7 @@
  * Plugin URI: https://tickets.suresupport.com
  * Author: Suresupport
  * Author URI: https://suresupport.com
- * Version: 1.0.4
+ * Version: 1.0.5
  * Text Domain: surecache-autopurge
  * Domain Path: /languages
  */
@@ -257,7 +257,9 @@ class SureCache_AutoPurge {
 
 	public function addComment( $commentID ) {
 		$comment = get_comment( $commentID );
-
+		if ( ! $comment || ! isset( $comment->comment_post_ID ) ) {
+			return $this;
+		}
 		return $this->addPost( $comment->comment_post_ID );
 	}
 

@@ -1,10 +1,10 @@
 === Server-Side Cache AutoPurge ===
 Contributors: suresupport
 Tags: cache, caching, fast, flush, purge, wp-cache, performance
-Requires at least: 4.8
-Tested up to: 6.7
-Requires PHP: 5.4
-Stable tag: 1.0.4
+Requires at least: 6.3
+Tested up to: 6.8
+Requires PHP: 7.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -49,6 +49,11 @@ You can also purge the cache with the following WP-CLI command:
 You can try to resolve the problem by purging the cache, deactivating the plugin, or disabling server-side caching from your Control Panel.
 
 == Changelog ==
+= 1.0.5 =
+* Fix - Purge on post update
+
+= 1.0.4 =
+* Fix - Handle wp errors
 
 = 1.0.3 =
 * Fix - Queue loop when SSC is turned off
