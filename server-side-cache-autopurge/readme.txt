@@ -2,7 +2,7 @@
 Contributors: suresupport
 Tags: cache, caching, fast, flush, purge, wp-cache, performance
 Requires at least: 6.3
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.4
 Stable tag: 1.0.5
 License: GPLv3
